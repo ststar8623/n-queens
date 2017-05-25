@@ -111,12 +111,29 @@
     //
     // test if a specific column on this board contains a conflict
     hasColConflictAt: function(colIndex) {
+      let col = this._currentAttributes;
+      let count = 0;
 
+      for (let i = 0; i < col.n; i++) {
+        if (col[i][colIndex] !== 0) {
+          count++;
+          if (count > 1) {
+            return true;
+          }
+        }
+      }
+      return false;
     },
 
     // test if any columns on this board contain conflicts
     hasAnyColConflicts: function() {
-
+      let col = this._currentAttributes;
+      for (let i = 0; i < col.n; i++) {
+        if (this.hasColConflictAt(i)) {
+          return true;
+        }
+      }
+      return false;
     },
 
 
