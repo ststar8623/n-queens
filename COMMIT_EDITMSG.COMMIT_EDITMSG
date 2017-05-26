@@ -1,0 +1,18 @@
+small change
+
+# --------------
+# Please enter the commit message for your changes. Everything below
+# this paragraph is ignored, and an empty message aborts the commit.
+# Just close the window to accept your message.
+diff --git a/src/Board.js b/src/Board.js
+index f60f572..0b3a725 100644
+--- a/src/Board.js
++++ b/src/Board.js
+@@ -184,7 +184,6 @@
+       let count = 0;
+       let minorCol = minorDiagonalColumnIndexAtFirstRow;
+ 
+-      console.log('minorCol ', minorCol);
+       for (let i = 0; i < row.n; i++) {
+         let rowI = i;
+         let colI = minorCol - i;
